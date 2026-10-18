@@ -1,8 +1,54 @@
-public class Vehicle {
-    String id;
-    String name;
-    String model;
-    String color;
+// tinh đong gói
+// private,protected,public
+// private: chỉ nội bộ trong class dùng,ben ngoài không thể truy cập được
+// public: tất cả class bên ngoài có thể sử dụng được
+// protected: chỉ cho class con có thể dùng duoc, class khác không thể su dụng
+//NGUYÊN TẮC
+// các thuộc tính BẮT BUỘC dùng private, trừ 1 số  case thì dùng protected
+// hàm khởi tạo BẮT BUỘC dùng public
+// trong case cc thuộc tính ở phạm vi private muốn truy cập => dùng getter ,setter để truy cập
+
+
+// Tính trừu tượng
+// class cha BẮT BUỘC CHỈ DÙNG cho class con kế thừa, không được dùng để tạo đối tượng
+abstract public class Vehicle {
+    private String id;
+    private String name;
+    private String model;
+    private String color;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getModel() {
+        return model;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     public Vehicle(){}
     public Vehicle(String id,String name,String model,String color){
         this.id=id;
@@ -10,6 +56,9 @@ public class Vehicle {
         this.model=model;
         this.color=color;
     }
+    abstract void getInfor();
+
+
     public void display(){
         System.out.println("ID: "+id);
         System.out.println("Name: "+name);

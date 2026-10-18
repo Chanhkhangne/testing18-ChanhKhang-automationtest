@@ -62,6 +62,8 @@ public class Main {
 // 1. K đc dùng class cha vì class cha CHỈ ĐỂ KẾ THỪA
         Car mec = new Car("1","Maybach","S600","Black",4,"Xăng");
         mec.display();
+
+//        Vehicle vehicle = new Vehicle();=>> LỖI vì class Vehicle là class cha
     }
 
 }
